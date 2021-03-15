@@ -9,6 +9,7 @@ class EncoderControllerV1 extends BaseController {
     /**
      * @description Get currently set properties of encoder.
      */
+    
     public async GetEncoderPropertiesByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
             const requestResult = await encoderServicesV1.GetEncoderPropertiesByPort(req.body);
