@@ -14,6 +14,7 @@ class EncoderControllerV1 extends BaseController {
     /**
      * @description Get currently set properties of encoder.
      */
+<<<<<<< HEAD
 
     @ApiOperationPost({
         description: "Api to import properties using port",
@@ -31,6 +32,9 @@ class EncoderControllerV1 extends BaseController {
             }
         },
     })
+=======
+    
+>>>>>>> c2d0b132930807d89b59dbbbaddc86559b263576
     public async GetEncoderPropertiesByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
             const requestResult = await encoderServicesV1.GetEncoderPropertiesByPort(req.body);
