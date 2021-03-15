@@ -6,7 +6,7 @@ import { IFilteredRequest } from "../../../interfaces";
 import { ApiPath, SwaggerDefinitionConstant, ApiOperationPost } from "swagger-express-ts"
 @ApiPath({
     path: "/api/v1",
-    name: "Distributor Process",
+    name: "Encoder API Calls",
     security: { apiKeyHeader: [] },
 })
 class EncoderControllerV1 extends BaseController {
@@ -16,9 +16,9 @@ class EncoderControllerV1 extends BaseController {
      */
 
     @ApiOperationPost({
-        description: "Api to import properties using port",
+        description: "Api to get currently set properties",
         path: '/getencoderpropertiesbyport',
-        summary: "Api to import properties using port",
+        summary: "Api to get currently set properties",
         parameters: { body: { description: "Port Number", required: true } },
         responses: {
             200: {
@@ -45,9 +45,9 @@ class EncoderControllerV1 extends BaseController {
      * @description Get current status of encoder.
      */
      @ApiOperationPost({
-        description: "Api to import status using port",
+        description: "Api to get status",
         path: '/getencoderstatusbyport',
-        summary: "Api to import status using port",
+        summary: "Api to get status",
         parameters: { body: { description: "Port Number", required: true } },
         responses: {
             200: {
@@ -73,9 +73,9 @@ class EncoderControllerV1 extends BaseController {
      * @description Request to start encoding.
      */
     @ApiOperationPost({
-        description: "Api to start encoding by port ",
+        description: "Api to start encoding",
         path: '/startencodingbyport',
-        summary: "Api to start encoding by port ",
+        summary: "Api to start encoding",
         parameters: { body: { description: "Port Number", required: true } },
         responses: {
             200: {
@@ -102,9 +102,9 @@ class EncoderControllerV1 extends BaseController {
      */
 
      @ApiOperationPost({
-        description: "Api to stop encoding by port ",
+        description: "Api to stop encoding",
         path: '/stopencodingbyport',
-        summary: "Api to stop encoding by port ",
+        summary: "Api to stop encoding",
         parameters: { body: { description: "Port Number", required: true } },
         responses: {
             200: {
