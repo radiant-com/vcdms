@@ -34,7 +34,7 @@ class EncoderControllerV1 extends BaseController {
 
     public async GetEncoderPropertiesByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
-            const requestResult = await encoderServicesV1.GetEncoderPropertiesByPort(JSON.parse(req.body));
+            const requestResult = await encoderServicesV1.GetEncoderPropertiesByPort(req.body);
             return res.send(requestResult);
         } catch (error) {
             return null;
@@ -62,7 +62,7 @@ class EncoderControllerV1 extends BaseController {
     })
     public async GetEncoderStatusByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
-            const requestResult = await encoderServicesV1.GetEncoderStatusByPort(JSON.parse(req.body));
+            const requestResult = await encoderServicesV1.GetEncoderStatusByPort(req.body);
             return res.send(requestResult);
         } catch (error) {
             return null;
@@ -90,7 +90,7 @@ class EncoderControllerV1 extends BaseController {
     })
     public async StartEncodingByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
-            const requestResult = await encoderServicesV1.StartEncodingByPort(JSON.parse(req.body));
+            const requestResult = await encoderServicesV1.StartEncodingByPort(req.body);
             return res.send(requestResult);
         } catch (error) {
             return null;
@@ -119,7 +119,7 @@ class EncoderControllerV1 extends BaseController {
     })
     public async StopEncodingByPort(req: IFilteredRequest<ReqEncoderschemas>, res: Response, next: NextFunction) {
         try {
-            const requestResult = await encoderServicesV1.StopEncodingByPort(JSON.parse(req.body));
+            const requestResult = await encoderServicesV1.StopEncodingByPort(req.body);
             return res.send(requestResult);
         } catch (error) {
             return null;
